@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanctuary Café & Art Atelier | Artisan Coffee & Creative Studio</title>
+  <meta name="description"
+    content="Welcome to Sanctuary Café & Art Atelier. Experience specialty single-origin coffees, organic botanical teas, fresh pastries, rotating art exhibitions, and Sip & Paint workshops.">
+  <meta name="keywords"
+    content="artisan cafe, specialty coffee, sip and paint, art gallery, local roaster, pastries, creative sanctuary">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Ambient Light Accents -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Announcement Bar -->
+  <aside class="top-banner" id="top-announcement" aria-label="Announcement">
+    <div class="container banner-content">
+      <span class="pulse-indicator"></span>
+      <p><strong>This Saturday:</strong> Sunset Sip &amp; Paint Masterclass with guest artist Elena Vance. <a
+          href="#workshops">Reserve your seat &rarr;</a></p>
+      <button class="banner-close" id="close-banner" aria-label="Close Announcement">&times;</button>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="header" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="Sanctuary Home">
+        <span class="logo-mark">
+          <i data-lucide="coffee"></i>
+        </span>
+        <div class="logo-text">
+          <span class="brand-title">SANCTUARY</span>
+          <span class="brand-sub">Café &amp; Art Atelier</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" id="nav-menu" aria-label="Primary Navigation">
+        <a href="#about" class="nav-item">About Us</a>
+        <a href="#menu" class="nav-item">Artisan Menu</a>
+        <a href="#gallery" class="nav-item">Art Gallery</a>
+        <a href="#workshops" class="nav-item">Sip &amp; Paint</a>
+        <a href="#hug-wall" class="nav-item">Hug Wall</a>
+        <a href="#visit" class="nav-item">Visit Us</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Live Status Badge -->
+        <div class="live-status-pill" id="live-hours-pill" title="Check live hours">
+          <span class="status-dot"></span>
+          <span id="status-text">Checking hours...</span>
+        </div>
+
+        <!-- Cart / Bag Trigger -->
+        <button class="icon-btn cart-btn" id="open-cart-btn" aria-label="View Order Bag">
+          <i data-lucide="shopping-bag"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+
+        <!-- Booking CTA -->
+        <a href="#reservation" class="btn btn-primary nav-cta">Book a Table</a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <span class="logo-mark"><i data-lucide="coffee"></i></span>
+        <span class="brand-title">SANCTUARY</span>
+      </div>
+      <button class="drawer-close" id="mobile-close-btn" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#about" class="mobile-nav-link">About Us</a>
+      <a href="#menu" class="mobile-nav-link">Artisan Menu</a>
+      <a href="#gallery" class="mobile-nav-link">Art Gallery</a>
+      <a href="#workshops" class="mobile-nav-link">Sip &amp; Paint</a>
+      <a href="#hug-wall" class="mobile-nav-link">Hug Wall</a>
+      <a href="#visit" class="mobile-nav-link">Visit &amp; Contact</a>
+      <a href="#reservation" class="btn btn-primary drawer-cta">Reserve Experience</a>
+    </div>
+    <div class="drawer-footer">
+      <p class="drawer-hours">🌿 Open Daily 7:30 AM – 10:00 PM</p>
+      <div class="drawer-socials">
+        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+        <a href="#" aria-label="Map"><i data-lucide="map-pin"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-container">
+      <img src="assets/images/hero-cafe.jpg"
+        alt="Sanctuary Café cozy interior with ambient lighting, coffee bar and art on walls" class="hero-bg-img"
+        fetchpriority="high">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge fade-in">
+        <span class="badge-sparkle">✦</span>
+        <span>Specialty Coffee Roastery &amp; Fine Art Atelier</span>
+      </div>
+      <h1 class="hero-title fade-in delay-1">
+        Where Coffee Meets <em>Canvas</em> &amp; Community.
+      </h1>
+      <p class="hero-subtitle fade-in delay-2">
+        Indulge in ethically sourced single-origin roasts, botanical herbal infusions, and house-baked artisan pastries
+        while immersed in an inspiring community gallery and live creative workshops.
+      </p>
+
+      <div class="hero-actions fade-in delay-3">
+        <a href="#menu" class="btn btn-primary btn-lg">
+          <i data-lucide="utensils"></i> Explore Menu
+        </a>
+        <a href="#workshops" class="btn btn-glass btn-lg">
+          <i data-lucide="palette"></i> Sip &amp; Paint Classes
+        </a>
+        <a href="#reservation" class="btn btn-outline btn-lg">
+          <i data-lucide="calendar"></i> Reserve Table
+        </a>
+      </div>
+
+      <!-- Hero Features / Highlights Strip -->
+      <div class="hero-highlights fade-in delay-4">
+        <div class="highlight-item">
+          <span class="highlight-icon"><i data-lucide="sparkles"></i></span>
+          <div class="highlight-text">
+            <h4>Micro-Batch Roasts</h4>
+            <p>100% Fair-trade Arabica beans</p>
+          </div>
+        </div>
+        <div class="highlight-divider"></div>
+        <div class="highlight-item">
+          <span class="highlight-icon"><i data-lucide="brush"></i></span>
+          <div class="highlight-text">
+            <h4>Live Art Studio</h4>
+            <p>Weekly guided Sip &amp; Paint sessions</p>
+          </div>
+        </div>
+        <div class="highlight-divider"></div>
+        <div class="highlight-item">
+          <span class="highlight-icon"><i data-lucide="heart"></i></span>
+          <div class="highlight-text">
+            <h4>The Hug Wall</h4>
+            <p>Share kindness &amp; soulful notes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Philosophy Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text-col">
+          <div class="section-tag">OUR STORY &amp; ETHOS</div>
+          <h2 class="section-title">A quiet sanctuary crafted for thoughtful sips &amp; inspired minds.</h2>
+          <p class="body-text lead-text">
+            Sanctuary Café was born from an unhurried dream: to unite the delicate rituals of artisan coffee brewing
+            with the free-spirited vibrancy of independent art.
+          </p>
+          <p class="body-text">
+            Nestled under warm skylights and surrounded by lush monstera foliage, our café is more than a gathering
+            place—it is an atelier for thinkers, dreamers, artists, and conversation seekers. Every cup is pulled with
+            precision; every pastry is freshly rolled before dawn; every wall tells the visual story of contemporary
+            local creators.
+          </p>
+
+          <div class="about-features">
+            <div class="feature-box">
+              <div class="feature-icon"><i data-lucide="coffee"></i></div>
+              <div>
+                <h5>Artisan Brew Methods</h5>
+                <p>Pour-over V60, Chemex, Aeropress &amp; velvet micro-foam espresso.</p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon"><i data-lucide="croissant"></i></div>
+              <div>
+                <h5>Scratch-Made Kitchen</h5>
+                <p>French-style viennoiserie, gluten-free bites &amp; seasonal toasts.</p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon"><i data-lucide="palette"></i></div>
+              <div>
+                <h5>Canvas &amp; Easels Included</h5>
+                <p>Sketch pads and art supplies complimentary with every table booking.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-signature-quote">
+            <p>“Here, the coffee warms your hands while the art speaks softly to your soul.”</p>
+            <div class="quote-author">— Mateo &amp; Clara, Founders</div>
+          </div>
+        </div>
+
+        <div class="about-visual-col">
+          <div class="visual-stack">
+            <div class="image-frame frame-main">
+              <img src="assets/images/artisan-food-tea.jpg"
+                alt="Artisan tea and breakfast pastry arrangement on rustic wood" loading="lazy">
+              <div class="frame-tag">Farm-to-Cup Daily</div>
+            </div>
+            <div class="image-frame frame-sub">
+              <img src="assets/images/hug-wall.jpg" alt="The famous Sanctuary Hug Wall with handwritten notes"
+                loading="lazy">
+              <div class="frame-badge">
+                <i data-lucide="heart-handshake"></i>
+                <span>Over 12,000 notes of hope pinned</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Artisan Menu Section -->
+  <section class="section menu-section" id="menu">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">CURATED PALETTE</span>
+        <h2 class="section-title">The Artisan Menu</h2>
+        <p class="section-subtitle">
+          Handcrafted espresso drinks, rare loose-leaf botanical infusions, and freshly baked accompaniments.
+        </p>
+
+        <!-- Menu Search & Filter Controls -->
+        <div class="menu-controls">
+          <div class="menu-search-wrapper">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" id="menu-search-input" placeholder="Search coffee, tea, pastries, matcha..."
+              aria-label="Search menu items">
+            <button class="search-clear" id="menu-search-clear" aria-label="Clear search">&times;</button>
+          </div>
+
+          <div class="category-tabs" id="category-tabs" role="tablist">
+            <button class="tab-btn active" data-category="all" role="tab">All Selections</button>
+            <button class="tab-btn" data-category="coffee" role="tab">Specialty Coffee</button>
+            <button class="tab-btn" data-category="tea" role="tab">Botanical Teas &amp; Tonics</button>
+            <button class="tab-btn" data-category="pastry" role="tab">Artisan Bakery</button>
+            <button class="tab-btn" data-category="signatures" role="tab">Atelier Signatures</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Grid (Populated & Dynamic) -->
+      <div class="menu-grid" id="menu-items-grid">
+        <!-- Rendered by script.js -->
+      </div>
+
+      <!-- Menu Footer Callout -->
+      <div class="menu-footer-banner">
+        <div class="banner-left">
+          <i data-lucide="leaf"></i>
+          <div>
+            <strong>Dietary Inclusivity:</strong> Oat, almond, soy &amp; coconut mylks available without surcharge.
+            Gluten-friendly &amp; vegan options baked fresh daily.
+          </div>
+        </div>
+        <a href="#reservation" class="btn btn-secondary btn-sm">Reserve Tasting Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Art Gallery & Exhibition -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">CURRENT EXHIBITION</span>
+        <h2 class="section-title">The Sanctuary Art Wall</h2>
+        <p class="section-subtitle">
+          We curate seasonal exhibitions celebrating regional painters, sculptors, and digital artists. All displayed
+          artworks are original and available for acquisition.
+        </p>
+      </div>
+
+      <!-- Gallery Filter -->
+      <div class="gallery-filters" id="gallery-filters">
+        <button class="filter-pill active" data-filter="all">All Pieces</button>
+        <button class="filter-pill" data-filter="botanical">Botanical &amp; Flora</button>
+        <button class="filter-pill" data-filter="sunset">Atmospheric Landscapes</button>
+        <button class="filter-pill" data-filter="sanctuary">Modern Abstract</button>
+      </div>
+
+      <!-- Gallery Cards Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Card 1: Botanical -->
+        <article class="art-card" data-category="botanical" tabindex="0" role="button"
+          aria-label="View Botanical Whispers artwork">
+          <div class="art-img-wrapper">
+            <img src="assets/images/artwork-botanical.jpg"
+              alt="Botanical Whispers contemporary artwork featuring lush foliage and vibrant flora" loading="lazy">
+            <div class="art-overlay">
+              <span class="zoom-badge"><i data-lucide="maximize-2"></i> View Artwork</span>
+            </div>
+            <span class="art-status-badge">Available</span>
+          </div>
+          <div class="art-info">
+            <div class="art-meta-row">
+              <span class="art-category">Botanical Series</span>
+              <span class="art-price">$480</span>
+            </div>
+            <h3 class="art-title">Botanical Whispers No. 4</h3>
+            <p class="art-artist">by Maya Linnea • Acrylic &amp; Gold Foil on Linen</p>
+          </div>
+        </article>
+
+        <!-- Card 2: Sunset -->
+        <article class="art-card" data-category="sunset" tabindex="0" role="button"
+          aria-label="View Golden Hour Horizon artwork">
+          <div class="art-img-wrapper">
+            <img src="assets/images/artwork-sunset.jpg"
+              alt="Golden Hour Horizon vibrant sunset painting with atmospheric warm clouds" loading="lazy">
+            <div class="art-overlay">
+              <span class="zoom-badge"><i data-lucide="maximize-2"></i> View Artwork</span>
+            </div>
+            <span class="art-status-badge">Featured</span>
+          </div>
+          <div class="art-info">
+            <div class="art-meta-row">
+              <span class="art-category">Atmospheric Landscapes</span>
+              <span class="art-price">$620</span>
+            </div>
+            <h3 class="art-title">Golden Hour Horizon</h3>
+            <p class="art-artist">by Arthur Pendelton • Oil on Canvas (36" x 48")</p>
+          </div>
+        </article>
+
+        <!-- Card 3: Sanctuary Bloom -->
+        <article class="art-card" data-category="sanctuary" tabindex="0" role="button"
+          aria-label="View Sanctuary in Bloom artwork">
+          <div class="art-img-wrapper">
+            <img src="assets/images/artwork-sanctuary.jpg"
+              alt="Sanctuary in Bloom abstract impressionist artwork with rich textures" loading="lazy">
+            <div class="art-overlay">
+              <span class="zoom-badge"><i data-lucide="maximize-2"></i> View Artwork</span>
+            </div>
+            <span class="art-status-badge">Available</span>
+          </div>
+          <div class="art-info">
+            <div class="art-meta-row">
+              <span class="art-category">Modern Abstract</span>
+              <span class="art-price">$540</span>
+            </div>
+            <h3 class="art-title">Sanctuary in Bloom</h3>
+            <p class="art-artist">by Clara Thorne • Textured Mixed Media on Board</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="gallery-cta-strip">
+        <div class="strip-text">
+          <h4>Are you a visual artist seeking representation?</h4>
+          <p>We review portfolios monthly to showcase promising emerging artists in our café atelier.</p>
+        </div>
+        <button class="btn btn-secondary" id="artist-submit-btn">
+          <i data-lucide="send"></i> Submit Portfolio
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sip & Paint Workshops Spotlight -->
+  <section class="section workshops-section" id="workshops">
+    <div class="container">
+      <div class="workshop-layout">
+        <div class="workshop-visual">
+          <div class="workshop-img-container">
+            <img src="assets/images/sip-and-paint.jpg"
+              alt="Sip and paint workshop in action with painters enjoying coffee and canvas" loading="lazy">
+            <div class="workshop-floating-card">
+              <div class="floating-icon"><i data-lucide="award"></i></div>
+              <div>
+                <strong>All Skill Levels Welcome</strong>
+                <p>Beginner-friendly step-by-step guidance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="workshop-details">
+          <span class="section-tag">WEEKLY WORKSHOPS &amp; EVENTS</span>
+          <h2 class="section-title">Sip, Paint &amp; Unwind</h2>
+          <p class="body-text">
+            Trade your screen time for canvas time. Led by warm, certified local artists, our intimate 2-hour workshops
+            invite you to discover your artistic voice while savoring complimentary specialty lattes or artisan wines.
+          </p>
+
+          <ul class="workshop-perks">
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span><strong>All Art Supplies Provided:</strong> Professional stretched canvas, acrylics, brushes &amp;
+                wooden tabletop easel.</span>
+            </li>
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span><strong>Complimentary Drink &amp; Pastry:</strong> Your choice of specialty coffee, signature herbal
+                tea, or sparkling mocktail.</span>
+            </li>
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span><strong>Take It Home:</strong> Leave with your finished, ready-to-hang masterpiece at the end of the
+                evening.</span>
+            </li>
+          </ul>
+
+          <!-- Upcoming Sessions Selector -->
+          <div class="upcoming-sessions">
+            <h4 class="sessions-header">Upcoming Available Sessions:</h4>
+
+            <div class="session-card" data-session="sunset-express">
+              <div class="session-date">
+                <span class="month">OCT</span>
+                <span class="day">03</span>
+              </div>
+              <div class="session-info">
+                <h5>Sunset Horizons &amp; Caramel Macchiatos</h5>
+                <p><i data-lucide="clock"></i> Thursday 6:30 PM – 8:30 PM • 4 spots remaining</p>
+              </div>
+              <button class="btn btn-sm btn-primary select-session-btn" data-title="Sunset Horizons (Oct 3)">Book Seat
+                ($45)</button>
+            </div>
+
+            <div class="session-card featured" data-session="botanical-magic">
+              <span class="popular-ribbon">Most Popular</span>
+              <div class="session-date">
+                <span class="month">OCT</span>
+                <span class="day">05</span>
+              </div>
+              <div class="session-info">
+                <h5>Botanical Leafscapes &amp; Matcha Lattes</h5>
+                <p><i data-lucide="clock"></i> Saturday 2:00 PM – 4:00 PM • 2 spots remaining</p>
+              </div>
+              <button class="btn btn-sm btn-primary select-session-btn" data-title="Botanical Leafscapes (Oct 5)">Book
+                Seat ($48)</button>
+            </div>
+
+            <div class="session-card" data-session="abstract-jazz">
+              <div class="session-date">
+                <span class="month">OCT</span>
+                <span class="day">08</span>
+              </div>
+              <div class="session-info">
+                <h5>Abstract Jazz &amp; Cold Brew Evenings</h5>
+                <p><i data-lucide="clock"></i> Tuesday 7:00 PM – 9:00 PM • 6 spots remaining</p>
+              </div>
+              <button class="btn btn-sm btn-primary select-session-btn" data-title="Abstract Jazz (Oct 8)">Book Seat
+                ($45)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Interactive "Hug Wall" Community Board -->
+  <section class="section hug-wall-section" id="hug-wall">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">COMMUNITY HEART</span>
+        <h2 class="section-title">The Sanctuary Hug Wall</h2>
+        <p class="section-subtitle">
+          In our café, there’s an entire cedarwood wall dedicated to warmth, gratitude, and words of encouragement. Pin
+          your thoughts on our interactive board below or in person when you visit!
+        </p>
+      </div>
+
+      <div class="hug-wall-container">
+        <!-- Interactive Note Form -->
+        <div class="hug-form-card">
+          <div class="form-card-header">
+            <i data-lucide="heart" class="heart-icon"></i>
+            <h3>Leave a Virtual Hug</h3>
+            <p>Send a message of love, advice, or positivity to fellow café visitors.</p>
+          </div>
+          <form id="hug-note-form">
+            <div class="form-group">
+              <label for="hug-author">Your Name / Alias</label>
+              <input type="text" id="hug-author" placeholder="e.g. A Fellow Dreamer" required maxlength="30">
+            </div>
+
+            <div class="form-group">
+              <label for="hug-message">Your Message or Affirmation</label>
+              <textarea id="hug-message" rows="3" placeholder="Write something that will brighten someone's day..."
+                required maxlength="160"></textarea>
+              <span class="char-count" id="hug-char-count">160 characters remaining</span>
+            </div>
+
+            <div class="form-group">
+              <label>Select Sticky Note Tone:</label>
+              <div class="color-picker-group">
+                <label class="color-opt">
+                  <input type="radio" name="noteColor" value="amber" checked>
+                  <span class="color-swatch swatch-amber" title="Warm Amber"></span>
+                </label>
+                <label class="color-opt">
+                  <input type="radio" name="noteColor" value="terracotta">
+                  <span class="color-swatch swatch-terracotta" title="Terracotta Rose"></span>
+                </label>
+                <label class="color-opt">
+                  <input type="radio" name="noteColor" value="sage">
+                  <span class="color-swatch swatch-sage" title="Matcha Sage"></span>
+                </label>
+                <label class="color-opt">
+                  <input type="radio" name="noteColor" value="creamy">
+                  <span class="color-swatch swatch-creamy" title="Espresso Cream"></span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              <i data-lucide="pin"></i> Pin to Hug Wall
+            </button>
+          </form>
+        </div>
+
+        <!-- Sticky Notes Interactive Board Display -->
+        <div class="hug-board-display" id="hug-board-display">
+          <!-- Dynamic Notes Populated by JS & localStorage -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Table & Workshop Reservation Section -->
+  <section class="section reservation-section" id="reservation">
+    <div class="container">
+      <div class="reservation-card-wrapper">
+        <div class="reservation-info-pane">
+          <span class="section-tag">RESERVATIONS</span>
+          <h2 class="pane-title">Reserve Your Table or Workshop Spot</h2>
+          <p class="pane-description">
+            Whether planning an intimate coffee rendezvous, creative sketch session, or reserving a seat for our Sip
+            &amp; Paint gatherings, we hold your spot with love.
+          </p>
+
+          <div class="reservation-highlights">
+            <div class="res-point">
+              <i data-lucide="sparkles"></i>
+              <div>
+                <strong>Guaranteed Seating:</strong> No waiting in weekend queues.
+              </div>
+            </div>
+            <div class="res-point">
+              <i data-lucide="clock"></i>
+              <div>
+                <strong>Grace Period:</strong> Tables held for 20 minutes past reservation.
+              </div>
+            </div>
+            <div class="res-point">
+              <i data-lucide="wifi"></i>
+              <div>
+                <strong>Creative Amenities:</strong> High-speed Wi-Fi, power outlets &amp; drawing pads.
+              </div>
+            </div>
+          </div>
+
+          <div class="res-contact-direct">
+            <p>For private group bookings (8+ guests) or corporate team retreats:</p>
+            <a href="tel:+15552342345" class="phone-link"><i data-lucide="phone"></i> (555) 234-2345</a>
+          </div>
+        </div>
+
+        <div class="reservation-form-pane">
+          <form id="reservation-form" novalidate>
+            <h3 class="form-title">Table Details</h3>
+
+            <div class="form-row">
+              <div class="form-col">
+                <label for="res-name">Full Name *</label>
+                <div class="input-with-icon">
+                  <i data-lucide="user"></i>
+                  <input type="text" id="res-name" placeholder="Eleanor Vance" required>
+                </div>
+              </div>
+              <div class="form-col">
+                <label for="res-email">Email Address *</label>
+                <div class="input-with-icon">
+                  <i data-lucide="mail"></i>
+                  <input type="email" id="res-email" placeholder="eleanor@example.com" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-col">
+                <label for="res-experience">Experience Type *</label>
+                <div class="input-with-icon">
+                  <i data-lucide="sparkle"></i>
+                  <select id="res-experience" required>
+                    <option value="table">Artisan Café Table &amp; Dining</option>
+                    <option value="sip-paint">Sip &amp; Paint Workshop</option>
+                    <option value="art-pod">Art &amp; Focus Pod (Quiet Work)</option>
+                    <option value="tasting">Barista Master Tasting Flight</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-col">
+                <label for="res-guests">Number of Guests *</label>
+                <div class="input-with-icon">
+                  <i data-lucide="users"></i>
+                  <select id="res-guests" required>
+                    <option value="1">1 Person (Solo Creative)</option>
+                    <option value="2" selected>2 Guests (Duo)</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 - 6 Guests</option>
+                    <option value="7">7+ Guests (Large Table)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-col">
+                <label for="res-date">Preferred Date *</label>
+                <div class="input-with-icon">
+                  <i data-lucide="calendar"></i>
+                  <input type="date" id="res-date" required>
+                </div>
+              </div>
+
+              <div class="form-col">
+                <label for="res-time">Time Slot *</label>
+                <div class="input-with-icon">
+                  <i data-lucide="clock"></i>
+                  <select id="res-time" required>
+                    <option value="08:30">08:30 AM (Morning Brew)</option>
+                    <option value="10:30">10:30 AM (Brunch Rush)</option>
+                    <option value="12:30">12:30 PM (Midday Chill)</option>
+                    <option value="15:00">03:00 PM (Afternoon Tea &amp; Art)</option>
+                    <option value="18:30">06:30 PM (Evening Glow)</option>
+                    <option value="20:00">08:00 PM (Acoustic &amp; Nightcap)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="res-notes">Special Requests or Dietary Notes (Optional)</label>
+              <textarea id="res-notes" rows="2"
+                placeholder="Window seating, celebration, easel requested, vegan milk preference..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-reservation-btn">
+              <i data-lucide="calendar-check"></i> Complete Reservation
+            </button>
+            <p class="form-disclaimer">Instant digital confirmation. Zero reservation cancellation fees.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit Us, Location & Hours Section -->
+  <section class="section visit-section" id="visit">
+    <div class="container">
+      <div class="visit-grid">
+        <div class="visit-card">
+          <div class="card-icon"><i data-lucide="map-pin"></i></div>
+          <h3>Find Our Haven</h3>
+          <p>428 Bohemian Atelier Way, Arts Quarter<br>Portland, OR 97201</p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="link-btn">
+            Open in Google Maps &rarr;
+          </a>
+        </div>
+
+        <div class="visit-card">
+          <div class="card-icon"><i data-lucide="clock"></i></div>
+          <h3>Café &amp; Studio Hours</h3>
+          <ul class="hours-list">
+            <li><span>Monday – Thursday:</span> <strong>7:30 AM – 9:00 PM</strong></li>
+            <li><span>Friday &amp; Saturday:</span> <strong>7:30 AM – 10:30 PM</strong></li>
+            <li><span>Sunday:</span> <strong>8:00 AM – 8:00 PM</strong></li>
+          </ul>
+          <span class="hours-badge" id="card-hours-status">Open today until 10:00 PM</span>
+        </div>
+
+        <div class="visit-card">
+          <div class="card-icon"><i data-lucide="sparkles"></i></div>
+          <h3>Atmosphere &amp; Amenities</h3>
+          <div class="amenities-tags">
+            <span class="amenity-tag">Ultra High-Speed Wi-Fi</span>
+            <span class="amenity-tag">Pet Friendly Patio</span>
+            <span class="amenity-tag">Complimentary Art Easels</span>
+            <span class="amenity-tag">Quiet Focus Loft</span>
+            <span class="amenity-tag">Wheelchair Accessible</span>
+            <span class="amenity-tag">EV Charging Nearby</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Testimonials / Community Voices -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">COMMUNITY VOICES</span>
+        <h2 class="section-title">Loved by Baristas, Artists &amp; Neighbors</h2>
+      </div>
+
+      <div class="testimonials-slider">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">
+            “The single best cortado I have had in years. Plus, sitting in front of real paintings with ambient acoustic
+            music made me finish an entire chapter of my book in one sitting.”
+          </p>
+          <div class="test-author">
+            <div class="avatar">SJ</div>
+            <div>
+              <strong>Sarah Jenkins</strong>
+              <span>Architect &amp; Regular</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">
+            “I brought my partner for the Saturday Sip &amp; Paint session. We are total amateurs, but the instructor
+            was so encouraging and the lavender honey latte was absolute magic.”
+          </p>
+          <div class="test-author">
+            <div class="avatar">DK</div>
+            <div>
+              <strong>David &amp; Kyle</strong>
+              <span>Weekend Workshop Guests</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">
+            “The Hug Wall made me tear up on a tough morning. Reading anonymous notes of encouragement while sipping my
+            matcha tonic gave me so much peace. This place is sacred.”
+          </p>
+          <div class="test-author">
+            <div class="avatar">MR</div>
+            <div>
+              <strong>Mira R.</strong>
+              <span>Creative Director</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter & Community Club -->
+  <section class="newsletter-section">
+    <div class="container newsletter-box">
+      <div class="newsletter-text">
+        <h3>Join the Sanctuary Atelier Club</h3>
+        <p>Receive secret monthly seasonal recipes, exclusive early invitations to art gallery vernissages, and $5 off
+          your next Sip &amp; Paint seat.</p>
+      </div>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn btn-primary">Join Atelier</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="brand-logo footer-logo">
+          <span class="logo-mark"><i data-lucide="coffee"></i></span>
+          <div class="logo-text">
+            <span class="brand-title">SANCTUARY</span>
+            <span class="brand-sub">Café &amp; Art Atelier</span>
+          </div>
+        </div>
+        <p class="footer-bio">
+          Crafting peaceful moments through artisanal coffee, soulful botanical teas, scratch bakery, and
+          community-driven art experiences.
+        </p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram" class="social-icon"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="Facebook" class="social-icon"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="Twitter / X" class="social-icon"><i data-lucide="twitter"></i></a>
+          <a href="#" aria-label="Pinterest" class="social-icon"><i data-lucide="pin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#menu">Artisan Menu</a></li>
+          <li><a href="#gallery">Current Exhibition</a></li>
+          <li><a href="#workshops">Sip &amp; Paint Calendar</a></li>
+          <li><a href="#hug-wall">The Hug Wall</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Experiences</h4>
+        <ul class="footer-links">
+          <li><a href="#reservation">Table Reservation</a></li>
+          <li><a href="#workshops">Private Paint Parties</a></li>
+          <li><a href="#gallery">Art Acquisition</a></li>
+          <li><a href="#menu">Catering &amp; Bakery Orders</a></li>
+          <li><a href="#about">Artist Residencies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Sanctuary Hours</h4>
+        <p class="footer-time-text">Mon – Thu: 7:30 AM – 9:00 PM</p>
+        <p class="footer-time-text">Fri – Sat: 7:30 AM – 10:30 PM</p>
+        <p class="footer-time-text">Sun: 8:00 AM – 8:00 PM</p>
+        <p class="footer-address"><i data-lucide="map-pin"></i> 428 Bohemian Atelier Way, Arts Quarter</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Sanctuary Café &amp; Art Atelier. All rights reserved. Handcrafted with precision &amp; care.</p>
+      <div class="bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Experience</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-in Cart / Order Drawer -->
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-heading" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <div class="cart-title-wrapper">
+        <i data-lucide="shopping-bag"></i>
+        <h3 id="cart-heading">Your Order Bag</h3>
+        <span class="cart-item-count" id="drawer-item-count">(0 items)</span>
+      </div>
+      <button class="drawer-close" id="close-cart-btn" aria-label="Close Order Bag">&times;</button>
+    </div>
+
+    <div class="cart-items-list" id="cart-items-container">
+      <!-- Dynamic Cart Items by JS -->
+    </div>
+
+    <div class="cart-drawer-footer" id="cart-footer">
+      <div class="cart-totals">
+        <div class="total-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="total-row tax-row">
+          <span>Est. Tax (8%)</span>
+          <span id="cart-tax">$0.00</span>
+        </div>
+        <div class="total-row grand-total">
+          <span>Total</span>
+          <span id="cart-grand-total">$0.00</span>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block btn-lg" id="checkout-btn">
+        <i data-lucide="check"></i> Order for Table Pickup
+      </button>
+      <button class="btn btn-link btn-block btn-clear-cart" id="clear-cart-btn">Clear Order</button>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- Interactive Art Lightbox Modal -->
+  <dialog class="art-modal" id="art-modal" aria-labelledby="modal-art-title">
+    <div class="modal-card">
+      <button class="modal-close" id="close-art-modal-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-body">
+        <div class="modal-img-container">
+          <img id="modal-art-img" src="" alt="Artwork detailed display">
+        </div>
+        <div class="modal-details">
+          <span class="modal-badge" id="modal-art-category">Exhibition Piece</span>
+          <h2 class="modal-title" id="modal-art-title">Title</h2>
+          <p class="modal-artist" id="modal-art-artist">Artist Details</p>
+          <div class="modal-price" id="modal-art-price">$0</div>
+          <p class="modal-description" id="modal-art-desc">
+            Hand-stretched on sustainable cedar bars. Finished with museum-grade UV protective archival varnish. Ready
+            to hang. Certificate of authenticity included.
+          </p>
+          <div class="modal-actions">
+            <button class="btn btn-primary btn-block" id="inquire-art-btn">
+              <i data-lucide="mail"></i> Inquire to Acquire This Original
+            </button>
+            <button class="btn btn-secondary btn-block" id="share-art-btn">
+              <i data-lucide="share-2"></i> Share Artwork
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Reservation Confirmation Modal -->
+  <dialog class="confirmation-modal" id="res-confirmation-modal">
+    <div class="modal-card confirm-card text-center">
+      <div class="confirm-icon"><i data-lucide="check-circle"></i></div>
+      <h2>Reservation Confirmed!</h2>
+      <p class="confirm-sub">We can't wait to welcome you to Sanctuary Café &amp; Atelier.</p>
+
+      <div class="confirm-ticket">
+        <div class="ticket-row">
+          <span>Booking Ref:</span>
+          <strong id="ticket-ref">#SNC-8492</strong>
+        </div>
+        <div class="ticket-row">
+          <span>Guest Name:</span>
+          <strong id="ticket-name">Eleanor Vance</strong>
+        </div>
+        <div class="ticket-row">
+          <span>Experience:</span>
+          <strong id="ticket-exp">Artisan Table &amp; Dining</strong>
+        </div>
+        <div class="ticket-row">
+          <span>Date &amp; Time:</span>
+          <strong id="ticket-datetime">Oct 04, 2026 at 10:30 AM</strong>
+        </div>
+        <div class="ticket-row">
+          <span>Party Size:</span>
+          <strong id="ticket-guests">2 Guests</strong>
+        </div>
+      </div>
+
+      <p class="ticket-note">A confirmation copy has been prepared. Please arrive 5-10 minutes ahead of your booking.
+      </p>
+      <button class="btn btn-primary btn-block" id="close-res-confirm-btn">Wonderful, See You Soon</button>
+    </div>
+  </dialog>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript Application -->
+  <script src="script.js"></script>
+</body>
+
+</html>
